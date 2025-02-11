@@ -1,0 +1,175 @@
+# Main format for the prompt
+format = """
+[](fg:#080808 bg:#444444)\
+[](fg:#444444 bg:#444444)\
+$username\
+[](fg:#444444 bg:#444444)\
+[](fg:#444444 bg:#777777)\
+$directory\
+[](fg:#777777 bg:#AAAAAA)\
+$git_branch\
+$git_status\
+[](fg:#AAAAAA bg:#DDDDDD)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#DDDDDD bg:#FFFFFF)\
+$time\
+[](fg:#FFFFFF)
+$character"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[character]
+success_symbol = "[](fg:#FFFFFF)"
+error_symbol = "[](fg:#AAAAAA)"
+format = "$symbol"
+
+# Username module with a neat symbol
+[username]
+show_always = true
+style_user = "bg:#444444"
+style_root = "bg:#666666"  # Darker grey for root
+format = '[ abdelilah]($style)'
+disabled = false
+
+# Directory module with improved truncation and icons
+[directory]
+style = "bg:#777777"
+format = "[ 󰉋 $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Directory substitutions for common folders
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Projects" = "󰈔 "
+"Work" = "󰑨 "
+
+# Git branch and status modules
+[git_branch]
+symbol = " "
+style = "fg:#333333 bg:#AAAAAA"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:#333333 bg:#AAAAAA"
+format = '[$all_status$ahead_behind ]($style)'
+
+# Programming language modules with consistent styling
+[c]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "fg:#444444 bg:#DDDDDD"
+format = '[ $symbol ($version) ]($style)'
+
+# Time module
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#444444 bg:#FFFFFF"  # Darker time background
+format = '[ 󰥔 $time ]($style)'
+
+# Additional modules
+[aws]
+symbol = " "
+style = "bg:#888888"  # Grey AWS
+format = '[ $symbol $profile ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#999999"  # Grey docker
+format = '[ $symbol $context ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#666666" # Grey python
+format = '[ $symbol ($version) ]($style)'
+
+[ruby]
+symbol = " "
+style = "bg:#777777" # Grey ruby
+format = '[ $symbol ($version) ]($style)'
+
+# Memory usage module
+[memory_usage]
+symbol = "󰍛 "
+style = "bg:#888888" # Grey memory
+format = '[ $symbol $ram ]($style)'
+
+# Custom OS symbols
+[os.symbols]
+Alpine = " "
+Arch = " "
+Debian = " "
+Fedora = " "
+Macos = " "
+Ubuntu = " "
+Windows = "󰍲 "

@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!starship.toml
+!wezterm/
+!lazygit/
+!wezterm/**/*
+!lazygit/**/*
