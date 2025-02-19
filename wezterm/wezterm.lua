@@ -108,36 +108,39 @@ config.keys = {
 	},
 }
 
--- Grayscale color definitions
-local black   = "#000000"
-local white   = "#FFFFFF"
-local gray20  = "#333333"
-local gray70  = "#B3B3B3"
-local gray90  = "#E6E6E6"
+-- Dark Theme with Accents
+local black   = "#1e1e1e"  -- Slightly softer black
+local white   = "#d4d4d4"  -- Off-white for readability
+local gray20  = "#424242"  -- Darker gray
+local gray70  = "#b0b0b0"  -- Medium gray
+local gray90  = "#e0e0e0"  -- Lighter gray
+local accent1 = "#64b5f6"  -- Blue accent
+local accent2 = "#a5d6a7"  -- Green accent
+local accent3 = "#ffb74d"  -- Orange accent
+local red = "#e57373"      -- Soft red for errors
 
-config.color_scheme = "Cloud (terminal.sexy)"  -- Set a descriptive color scheme name
+
+config.color_scheme = "Custom Dark"  -- Descriptive name
 
 config.colors = {
 	background = black,  -- Solid black background
-	foreground = gray70,  -- Light gray text
-	cursor_border = gray70,
-	cursor_bg = gray70,
+	foreground = white,  -- Light gray text
+	cursor_border = accent1,
+	cursor_bg = accent1,
 	cursor_fg = black,
 	selection_bg = gray20, -- Slightly lighter selection
 	selection_fg = gray90,
 
   -- ANSI colors - standard colors
-  ansi = { black, gray20, gray20, gray70, gray20, gray70, gray20, gray70 },
-
-  -- ANSI colors - bright colors
-  brights = { gray20, gray70, gray70, white, gray70, white, gray70, white },
+  ansi = { black, red, accent2, accent3, accent1, "#9c27b0", "#00bcd4", gray70 }, -- Purple and cyan added
+  brights = { gray20, red, accent2, accent3, accent1, "#9c27b0", "#00bcd4", white },  -- Brighter versions
 
 
 	tab_bar = {
 		background = black,
 		active_tab = {
 			bg_color = black,
-			fg_color = white,
+			fg_color = gray90,
 			intensity = "Normal",
 			underline = "None",
 			italic = false,
@@ -153,7 +156,7 @@ config.colors = {
 		},
 		new_tab = {
 			bg_color = black,
-			fg_color = white,
+			fg_color = accent2,
 		},
 	},
 }
