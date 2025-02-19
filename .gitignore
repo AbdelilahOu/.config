@@ -4,5 +4,7 @@
 !starship.toml
 !wezterm/
 !lazygit/
+!lazydocker/
 !wezterm/**/*
 !lazygit/**/*
+!lazydocker/**/*
