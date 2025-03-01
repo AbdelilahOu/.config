@@ -1,15 +1,16 @@
+# Aura theme for Starship prompt
 # Main format for the prompt
 format = """
-[](fg:#FFFFFF bg:#ADD7FF)\
-[](fg:#ADD7FF bg:#ADD7FF)\
+[](fg:#FFFFFF bg:#86d0f9)\
+[](fg:#86d0f9 bg:#86d0f9)\
 $username\
-[](fg:#ADD7FF bg:#A6ACCD)\
-[](fg:#A6ACCD bg:#767C9D)\
+[](fg:#86d0f9 bg:#ae9ad6)\
+[](fg:#ae9ad6 bg:#6d6883)\
 $directory\
-[](fg:#767C9D bg:#171922)\
+[](fg:#6d6883 bg:#15141b)\
 $git_branch\
 $git_status\
-[](fg:#171922 bg:#1B1E28)\
+[](fg:#15141b bg:#1c1b24)\
 $c\
 $elixir\
 $elm\
@@ -22,30 +23,30 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#1B1E28 bg:#303340)\
+[](fg:#1c1b24 bg:#21202e)\
 $time\
-[](fg:#303340)
+[](fg:#21202e)
 $character"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false
 
 [character]
-success_symbol = "[](fg:#303340)"
-error_symbol = "[](fg:#D0679D)" # Pink3 for error
+success_symbol = "[](fg:#21202e)"
+error_symbol = "[](fg:#e26c7c)" # Red for error
 format = "$symbol"
 
 # Username module with a neat symbol
 [username]
 show_always = true
-style_user = "bg:#ADD7FF"
-style_root = "bg:#A6ACCD"  # Darker grey for root
-format = '[ abdelilah]($style)'
+style_user = "bg:#86d0f9"
+style_root = "bg:#ae9ad6"  # Purple for root
+format = '[ abdelilah ]($style)'
 disabled = false
 
 # Directory module with improved truncation and icons
 [directory]
-style = "bg:#767C9D"
+style = "bg:#6d6883"
 format = "[ 󰉋 $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -53,123 +54,123 @@ truncation_symbol = "…/"
 # Directory substitutions for common folders
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 "Projects" = "󰈔 "
 "Work" = "󰑨 "
 
 # Git branch and status modules
 [git_branch]
-symbol = " "
-style = "fg:#ADD7FF bg:#171922"
+symbol = " "
+style = "fg:#a277ff bg:#15141b"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "fg:#ADD7FF bg:#171922"
+style = "fg:#a277ff bg:#15141b"
 format = '[$all_status$ahead_behind ]($style)'
 
 # Programming language modules with consistent styling
 [c]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [elixir]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [golang]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = "󰆥 "
-style = "fg:#ADD7FF bg:#1B1E28"
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 [scala]
-symbol = " "
-style = "fg:#ADD7FF bg:#1B1E28"
+symbol = " "
+style = "fg:#86d0f9 bg:#1c1b24"
 format = '[ $symbol ($version) ]($style)'
 
 # Time module
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:#ADD7FF bg:#303340"  # Darker time background
+style = "fg:#86d0f9 bg:#21202e"  # Darker time background
 format = '[ 󰥔 $time ]($style)'
 
 # Additional modules
 [aws]
-symbol = " "
-style = "bg:#171922"  # Grey AWS
+symbol = " "
+style = "bg:#15141b"
 format = '[ $symbol $profile ]($style)'
 
 [docker_context]
-symbol = " "
-style = "bg:#171922"  # Grey docker
+symbol = " "
+style = "bg:#15141b"
 format = '[ $symbol $context ]($style)'
 
 [python]
-symbol = " "
-style = "bg:#ADD7FF" # Grey python
+symbol = " "
+style = "bg:#86d0f9"
 format = '[ $symbol ($version) ]($style)'
 
 [ruby]
-symbol = " "
-style = "bg:#A6ACCD" # Grey ruby
+symbol = " "
+style = "bg:#ae9ad6"
 format = '[ $symbol ($version) ]($style)'
 
 # Memory usage module
 [memory_usage]
 symbol = "󰍛 "
-style = "bg:#171922" # Grey memory
+style = "bg:#15141b"
 format = '[ $symbol $ram ]($style)'
 
 # Custom OS symbols
 [os.symbols]
-Alpine = " "
-Arch = " "
-Debian = " "
-Fedora = " "
-Macos = " "
-Ubuntu = " "
+Alpine = " "
+Arch = " "
+Debian = " "
+Fedora = " "
+Macos = " "
+Ubuntu = " "
 Windows = "󰍲 "
