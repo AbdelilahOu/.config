@@ -1,10 +1,8 @@
 # Vesper theme for Starship prompt (Dark to Light gradient)
 # Main format for the prompt
 format = """
-[](fg:#101010 bg:#101010)\
-[](fg:#101010 bg:#101010)\
-$username\
 [](fg:#101010 bg:#161616)\
+$username\
 [](fg:#161616 bg:#1C1C1C)\
 $directory\
 [](fg:#1C1C1C bg:#232323)\
@@ -29,122 +27,147 @@ $time\
 $character"""
 # Disable the blank line at the start of the prompt
 add_newline = false
+
 [character]
 success_symbol = "[](fg:#343434)"
-error_symbol = "[](fg:#FF8080)" # Red for error
+error_symbol = "[](fg:#FF8080)"   # Red for error
 format = "$symbol"
+
 # Username module with a neat symbol
 [username]
 show_always = true
 style_user = "fg:#FFC799 bg:#101010"
-style_root = "fg:#FF8080 bg:#101010"  # Red for root
+style_root = "fg:#FF8080 bg:#101010" # Red for root
 format = '[ abdelilah ]($style)'
 disabled = false
+
 # Directory module with improved truncation and icons
 [directory]
 style = "fg:#99FFE4 bg:#1C1C1C"
 format = "[ 󰉋 $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
+
 # Directory substitutions for common folders
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Downloads" = "󰇍 "
+"Music" = "󰝚 "
+"Pictures" = "󰋩 "
 "Projects" = "󰈔 "
 "Work" = "󰑨 "
+
 # Git branch and status modules
 [git_branch]
-symbol = " "
+symbol = " "
 style = "fg:#FFC799 bg:#232323"
 format = '[ $symbol $branch ]($style)'
+
 [git_status]
 style = "fg:#FFC799 bg:#232323"
 format = '[$all_status$ahead_behind ]($style)'
+
 # Programming language modules with consistent styling
 [c]
-symbol = " "
+symbol = " "                             # C
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [elixir]
-symbol = " "
+symbol = " "                             # Elixir
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [elm]
-symbol = " "
+symbol = "󰙯 "                             # Elm
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [golang]
-symbol = " "
+symbol = " "                             # Go
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [gradle]
-symbol = " "
+symbol = " "                             # Gradle
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [haskell]
-symbol = " "
+symbol = "λ "                             # Haskell (Lambda)
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [java]
-symbol = " "
+symbol = " "                             # Java
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [julia]
-symbol = " "
+symbol = " "                             # Julia
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [nodejs]
-symbol = " "
+symbol = "󰎙 "                             # Node.js
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [nim]
-symbol = "󰆥 "
+symbol = "󰆥 "                             # Nim (icon already correct)
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [rust]
-symbol = " "
+symbol = " "                             # Rust (icon already correct)
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 [scala]
-symbol = " "
+symbol = " "                             # Scala (icon already correct)
 style = "fg:#99FFE4 bg:#282828"
 format = '[ $symbol ($version) ]($style)'
+
 # Time module
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:#FFC799 bg:#343434"  # Lighter time background
+style = "fg:#FFC799 bg:#343434" # Lighter time background
 format = '[ 󰥔 $time ]($style)'
+
 # Additional modules
 [aws]
-symbol = " "
+symbol = " "                           # AWS (icon already correct)
 style = "fg:#FFFFFF bg:#232323"
 format = '[ $symbol $profile ]($style)'
+
 [docker_context]
-symbol = " "
+symbol = "󰏫 "                           # Docker (icon already correct)
 style = "fg:#FFFFFF bg:#232323"
 format = '[ $symbol $context ]($style)'
+
 [python]
-symbol = " "
+symbol = " "                             # Python, use the C icon for simplicity
 style = "fg:#FFFFFF bg:#232323"
 format = '[ $symbol ($version) ]($style)'
+
 [ruby]
-symbol = " "
+symbol = " "                             # Ruby, use the C icon for simplicity
 style = "fg:#FFFFFF bg:#232323"
 format = '[ $symbol ($version) ]($style)'
+
 # Memory usage module
 [memory_usage]
-symbol = "󰍛 "
+symbol = "󰍛 "                       # Memory (icon already correct)
 style = "fg:#99FFE4 bg:#232323"
 format = '[ $symbol $ram ]($style)'
+
 # Custom OS symbols
 [os.symbols]
-Alpine = " "
-Arch = " "
-Debian = " "
-Fedora = " "
-Macos = " "
-Ubuntu = " "
+Alpine = " "
+Arch = "󰃆 "
+Debian = "󰐯 "
+Fedora = "󰍲 "
+Macos = "󰆨 "
+Ubuntu = "󰒓 "
 Windows = "󰍲 "
