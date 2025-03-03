@@ -1,15 +1,16 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 -- local poimandres = require("colors/poimandres").setup {}
-local aura = require("colors/aura").setup {}
+-- local aura = require("colors/aura").setup {}
+local vesper = require("colors/vesper").setup {}
 local act = wezterm.action
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.color_scheme = "Aura"
+config.color_scheme = "Vesper"
 
-config.colors = aura
+config.colors = vesper
 
 config.front_end = "OpenGL"
 config.max_fps = 144
