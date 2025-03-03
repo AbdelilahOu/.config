@@ -1,9 +1,9 @@
 # Vesper theme for Starship prompt (Dark to Light gradient)
 # Main format for the prompt
 format = """
-[](fg:#101010 bg:#161616)\
+[](fg:#101010 bg:#101010)\
 $username\
-[](fg:#161616 bg:#1C1C1C)\
+[](fg:#101010 bg:#1C1C1C)\
 $directory\
 [](fg:#1C1C1C bg:#232323)\
 $git_branch\
@@ -46,7 +46,7 @@ disabled = false
 style = "fg:#99FFE4 bg:#1C1C1C"
 format = "[ 󰉋 $path ]($style)"
 truncation_length = 3
-truncation_symbol = "…/"
+truncation_symbol = ""
 
 # Directory substitutions for common folders
 [directory.substitutions]
